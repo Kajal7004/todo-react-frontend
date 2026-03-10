@@ -101,13 +101,22 @@ button {
 .todo-item{
   background-color: white;
   color: black;
+  display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 95%;
+    border-radius: 0;
+}
+.todo-input textarea {
+  height: 50px;
 }
 .todo-container {
   background-color: white;
     /* height: 550px; */
-    width: 450px;
+    width: 750px;
     padding: 15px;
     display: block;
+    color: black;
 }
 
 .input-item{
@@ -134,6 +143,9 @@ button {
 .add-btn {
     font-size: 20px;
     background-color: rgb(143, 187, 241);
+    border: 2px solid black;
+    height: 2.5rem;
+    color: black;
 }
 
 .todo-container p {
@@ -171,12 +183,18 @@ button {
 .dltBtn i:hover{
   color: black;
 }
-.todo-actions {
+.action-btn {
+  
   display: flex;
     justify-content: flex-end;
     gap: 10px;
     flex-direction: row;
     align-items: center;
+
+}
+.todo-task {
+  display: flex;
+  justify-content: space-between;
 }
 .todo-info {
   display: flex;
@@ -213,4 +231,106 @@ ul {
 }
 .logout:hover {
   background-color: rgb(237, 140, 43);
+}
+
+
+.modal-backdrop {
+  position: fixed; /* Fixes it to the screen regardless of scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it stays on top of your todo list */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners like your screenshot */
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.modal-form input {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 4px;
+}
+
+.modal-form textarea {
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  width: 80%;
+  height: 50px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-save{
+  background-color: green;
+}
+.btn-cancel {
+  background-color: gray;
+}
+
+.close-btn {
+  
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+    justify-content: space-between;
+}
+
+.search {
+  display: flex;
+    height: 55px;
+    gap: 5px;
+    position: relative;
+    /* right: 10px; */
+    display: inline-block
+}
+.search input {
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  background: beige;
+}
+/* .search-btn {
+  height: 30px;
+    background: gainsboro;
+    border: 1px solid black;
+    width: 30px;
+    border-radius: 5px;
+} */
+
+.search i {
+  display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

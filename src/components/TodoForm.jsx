@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { createTodo } from '../api/api';
 const TodoForm = ({ setTodos }) => {
  
+  //const [searchTerm, setSearchTerm] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("Personal");
@@ -36,6 +37,16 @@ const TodoForm = ({ setTodos }) => {
   return (
       
       <div >
+        {/* <div className="search-container"> */}
+  {/* <input 
+    type="text" 
+    placeholder="Search tasks..." 
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    className="search-bar"
+  />
+  <i className="material-icons">search</i>
+</div> */}
         <div className="todo-input">
           <input 
           className="todo-item"
