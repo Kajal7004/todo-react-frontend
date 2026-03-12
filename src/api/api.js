@@ -18,20 +18,6 @@ API.interceptors.request.use(
   }
 ); 
 
-const searchTodo = {
-  search: '',
-  
-};
-API.get('/todos', {
-    params: searchTodo
-  })
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error(error);
-  });
-
 export const loginUser = (credentials) => API.post('/auth/login', credentials);
 export const registerUser = (userData) => API.post('/auth/register', userData);
 
@@ -42,4 +28,3 @@ export const fetchTodos = (params = {}) => API.get('/todos',{
 export const createTodo = (newTodo) => API.post('/todos', newTodo);
 export const deleteTodo = (id) => API.delete(`/todos/${id}`);
 export const updateTodo = (id, updatedTodo) => API.put(`/todos/${id}`, updatedTodo);
-//export const searchTodo = (search) => API.get(`/todos?search=${search}`);

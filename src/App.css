@@ -317,13 +317,6 @@ ul {
   padding-left: 20px;
   background: beige;
 }
-/* .search-btn {
-  height: 30px;
-    background: gainsboro;
-    border: 1px solid black;
-    width: 30px;
-    border-radius: 5px;
-} */
 
 .search i {
   display: flex;
@@ -333,4 +326,19 @@ ul {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.pagination button {
+  border-radius: 50%;
+  background-color: rgb(235, 217, 217);
+  border: 1px solid black;
+  color: black;
 }
